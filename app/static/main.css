@@ -93,9 +93,12 @@ body {
     margin-top:20px;
   }
   #post{ 
-    float: right;
-    margin-right: -300px;
-    margin-top: 150px;
+    float: left;
+    margin-top: -40%;
+    margin-left: 85%;
+    position: fixed;
+    background-color: transparent;
+    border-style: none;
     
   }
   .fa-plus-circle{
