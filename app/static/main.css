@@ -2,6 +2,7 @@ body {
     background: #fafafa;
     color: #333333;
     margin-top: 5rem;
+    width: 70vw;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -27,11 +28,21 @@ body {
   .content-section {
     background: #ffffff;
     padding: 10px 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid #0b2c0e;
     border-radius: 3px;
-    margin-bottom: 20px;
+    margin-left: 180px;
+    margin-top: 30px;
+    width: 60vw;
+    display: flex;
+
   }
-  
+  .media{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 120px;
+    margin-top:30px;
+  }
   .article-title {
     color: #444444;
   }
@@ -67,7 +78,9 @@ body {
     height: 25px;
     vertical-align: middle;
   }
-  
+  .about{
+    background-color: #0b2c0e;
+  } 
   .account-img {
     height: 125px;
     width: 125px;
@@ -76,5 +89,15 @@ body {
   }
   
   .account-heading {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+    margin-top:20px;
+  }
+  #post{ 
+    float: right;
+    margin-right: -300px;
+    margin-top: 150px;
+    
+  }
+  .fa-plus-circle{
+    font-size: 70px;
   }
