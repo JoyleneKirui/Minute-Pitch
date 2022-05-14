@@ -11,6 +11,7 @@
           <h5><a class="article-title" href="#">{{ post.title }}</a></h5>
           <p class="article-content">{{ post.content }}</p>
         </div>
+       
       </article>
       {% endfor %} 
       {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
@@ -24,5 +25,8 @@
         ...
       {% endif %}
     
-    {% endfor %}       
+    {% endfor %} 
+    <div id = "post">
+      <a class="btn btn-light fa fa-plus-circle fa-5x" href="{{ url_for('new_post') }}">Pitch</a>
+    </div>      
   {% endblock content %}

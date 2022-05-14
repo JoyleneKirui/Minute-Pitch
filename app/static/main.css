@@ -8,17 +8,18 @@ body {
   h1, h2, h3, h4, h5, h6 {
     color: #444444;
   }
-  
+
   .bg-steel {
-    background-color: #04250e;
+    background-color: #361258;
+    height: 80px;
   }
   
   .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+    color: #ffffff;
   }
   
   .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
+    color: rgb(238, 167, 145);
   }
   
   .site-header .navbar-nav .nav-link.active {
@@ -28,7 +29,7 @@ body {
   .content-section {
     background: #ffffff;
     padding: 10px 20px;
-    border: 1px solid #0b2c0e;
+    border: 1px solid rgb(238, 211, 236);
     border-radius: 3px;
     margin-left: 180px;
     margin-top: 30px;
@@ -78,9 +79,6 @@ body {
     height: 25px;
     vertical-align: middle;
   }
-  .about{
-    background-color: #0b2c0e;
-  } 
   .account-img {
     height: 125px;
     width: 125px;
@@ -94,13 +92,26 @@ body {
   }
   #post{ 
     float: left;
-    margin-top: -40%;
-    margin-left: 85%;
+    left: 88%;
     position: fixed;
-    background-color: transparent;
-    border-style: none;
-    
+    top: 75%;
+    border-style:solid;
+    border-radius: 10px;
+    border-color:rgb(222, 235, 235);
+   
+  
   }
   .fa-plus-circle{
     font-size: 70px;
+  }
+  .btn-light{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutmin{
+    
+    
+    height: 70vh;
+    width: 100vw;
   }
