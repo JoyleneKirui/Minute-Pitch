@@ -1,7 +1,7 @@
 from flask_wtf.file import FileField, FileAllowed
 from flask_wtf import FlaskForm
 from flask_login import current_user
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, SelectField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from app.models import User
 
@@ -59,4 +59,6 @@ class LoginForm(FlaskForm):
 class PostForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
+    category = SelectField("category", choices=[("pick-up", "pick-up"),("dull","dull"),("goofy","goofy"),("sales","sales"),("music","music"),("cheesy","cheesy"),("random","random")],validators = [DataRequired()])
+
     submit = SubmitField('Post')
