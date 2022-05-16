@@ -29,17 +29,3 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date}')"
-
-class Comment(db.Model):
-    comment_id = db.Column(db.Integer, primary_key=True)
-    comment = db.Column(db.String(500), index=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.user_id"))
-    post_id = db.Column(db.Integer, db.ForeignKey("posts.post_id"))
-
-    def save_comment(self, comment):
-        ''' Save the comment '''
-        db.session.add(comment)
-        db.session.commit()
-
-    def __repr__(self):
-        return f"Pitch('{self.comment}')"

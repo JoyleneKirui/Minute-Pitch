@@ -1,11 +1,10 @@
 import os
 import secrets
-from .email import mail_message
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request
 from app import app, db, bcrypt
-from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm, CommentForm
-from app.models import User, Post, Comment
+from app.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
+from app.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
  
 
@@ -113,18 +112,3 @@ def user_posts(username):
         .paginate(page=page, per_page=5)
     return render_template('user_posts.html', posts=posts, user=user)
 
-@app.route('/comment', methods=['GET', 'POST'])
-@login_required
-def comment(post_id):
-    form = CommentForm()
-    post = Post.query.get(post_id)
-    all_comments = Comment.query.filter_by(post_id=post_id).all()
-    if form.validate_on_submit():
-        comment = form.comment.data
-        post_id = post_id
-        user_id = current_user._get_current_object().id
-        new_comment = Comment(comment=comment, user_id=user_id, post_id=post_id)
-        new_comment.save_c()
-        return redirect(url_for('comment', post_id=post_id))
-    form = CommentForm()
-    return render_template('comment.html', form=form, post=post, all_comments=all_comments)
