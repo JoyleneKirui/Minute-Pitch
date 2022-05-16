@@ -62,3 +62,8 @@ class PostForm(FlaskForm):
     category = SelectField("category", choices=[("pick-up", "pick-up"),("dull","dull"),("goofy","goofy"),("sales","sales"),("music","music"),("cheesy","cheesy"),("random","random")],validators = [DataRequired()])
 
     submit = SubmitField('Post')
+    
+class CommentForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    comment = StringField('Comment', validators=[DataRequired()])
+    submit = SubmitField('Comment')

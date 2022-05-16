@@ -11,6 +11,17 @@
             </div>
             <p class="article-content">{{ post.content }}</p>
         </div>
+        <div>
+            <a class="btn btn-primary" href="{{ url_for('comment') }}">Comment</a>
+        </div>
+        <div class="thumb " style="color:green">
+            <p><i class="fa-solid fa-thumbs-up"></i>Upvotes 0</p>
+
+            <p><i class="fa-solid fa-thumbs-down"></i>Downvotes 0</p>
+
+
+        </div>
+    </div>
         </article>
     {% endfor %}
     {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
